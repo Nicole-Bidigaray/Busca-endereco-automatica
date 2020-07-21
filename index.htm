@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscar CEP</title>
+
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/assets/fonts/Raleway-Bold.ttf">
+
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div id="navegador">
+        <header>
+            <nav>
+                <ul>
+                    <li><a id="buscar" href="#">Buscar CEP</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">Componentes</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">HTML</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <section id="container">
+        <div class="buscacep">
+            <div class="titulo">
+                <p class="titulovermelho">digite um cep</p>
+                <p id="texto">Digite abaixo para consultar um Código de Endereçamento <br> Postal(CEP) do Brasil</p>
+                <form>
+                    <label for="cep"></label>
+                    <input type="text" class="form-control" maxlength="9" id="cep" placeholder="Cep">
+
+                    <button type="button" id="btnEndereco" name="btnEndereco" value="Mostrar no mapa">Buscar</button>
+
+                </form>
+            </div>
+        </div>
+        <div class="mapa">
+
+            <div class="conteudo">
+                <div class="white">
+                    <div class="endereco">
+
+                        <form action="">
+                            <ul id="resultado">
+                                <div class="form-group" method="post" action="" id="">
+                                    <label for="txtEndereco"></label>
+                                    <input type="text" class="form-control" id="txtEndereco" name="txtEndereco">
+                                    <li>
+                                        <label for="logradouro"></label>
+                                        <input type="text" class="form-control" id="logradouro">
+                                    </li>
+                                    <li>
+                                        <label for="bairro"></label>
+                                        <input type="text" class="form-control" id="bairro">
+                                    </li>
+                                    <li class="field-group">
+                                        <label for="localidade"></label>
+                                        <input type="text" class="form-control" id="localidade">
+
+                                        <label for="uf"></label>
+                                        <input type="text" class="form-control" id="uf">
+                                    </li>
+                                    <article id="mapa">
+                                        <input type="hidden" id="txtLatitude" name="txtLatitude" />
+                                        <input type="hidden" id="txtLongitude" name="txtLongitude" />
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14621.54420208755!2d-46.64887236415713!3d-23.626341797970845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5af610b0ce35%3A0xd3614748581390dc!2sVila%20Monte%20Alegre%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004046-500!5e0!3m2!1spt-BR!2sbr!4v1595233191896!5m2!1spt-BR!2sbr"
+                                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                    </article>
+                                </div>
+                    </div>
+                    </ul>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/main.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=ColoqueASuaKeyAqui&amp;sensor=false"></script>
+
+</body>
+
+</html>
